@@ -1,0 +1,6 @@
+useDynLib("RcppNLoptExample", .registration=TRUE)
+
+import("nloptr")
+importFrom("Rcpp", "sourceCpp")
+
+export("testConstrainedProblem")
