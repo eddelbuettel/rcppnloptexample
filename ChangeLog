@@ -1,0 +1,17 @@
+2018-10-01  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Initial release 0.0.1
+
+	* src/nlopt.cpp: Use C++98 for portability
+	* src/Makevars: Removed as no settings needed
+	* src/Makevars.win: Idem
+
+	* simpleTest.R: Added simple tests
+
+2018-09-30  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION: Initial version
+	* NAMESPACE: Idem
+
+	* src/nlopt.cpp: Simple illustration from the NLopt tutorial
+	* man/testConstrainedProblem.Rd: Documentation

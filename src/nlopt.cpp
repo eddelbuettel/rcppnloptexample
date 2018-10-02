@@ -58,9 +58,11 @@ std::vector<double> testConstrainedProblem(std::string method = "MMA",
     nlopt_add_inequality_constraint(opt, myconstraint, &data[0], 1e-8);
     nlopt_add_inequality_constraint(opt, myconstraint, &data[1], 1e-8);
     nlopt_set_xtol_rel(opt, 1e-4);
-    std::vector<double> x{ 1.234, 5.678 };	// some initial guess
+    std::vector<double> x;
+    x.push_back(1.234);						// some initial guess
+    x.push_back(5.678);						// some initial guess
     double minf; 							// minimum objective value, upon return
-    fcount = ccount = 0;                    // reset counters
+    fcount = ccount = 0;            	    // reset counters
 
     if (nlopt_optimize(opt, &(x[0]), &minf) < 0) {
         if (verbose) Rcpp::Rcout << "nlopt failed!" << std::endl;

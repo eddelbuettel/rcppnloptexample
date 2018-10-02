@@ -1,14 +1,15 @@
 Package: RcppNLoptExample
 Type: Package
-Title: Rcpp Package Illustrating Header-Only Access to NLopt
-Version: 0.1.0
+Title: 'Rcpp' Package Illustrating Header-Only Access to 'NLopt'
+Version: 0.0.1
+Date: 2018-10-01
 Author: Dirk Eddelbuettel
 Maintainer: Dirk Eddelbuettel <edd@debian.org>
-Description: An example package which shows use of NLopt functionality from
- C++ via Rcpp without requiring linking, and relying just on nloptr thanks
+Description: An example package which shows use of 'NLopt' functionality from
+ C++ via 'Rcpp' without requiring linking, and relying just on 'nloptr' thanks
  to the exporting API added there by Jelmer Ypma. This package is a fully
  functioning, updated, and expanded version of the initial example by
- Julien Chiquet at https://github.com/jchiquet/RcppArmadilloNLoptExample
+ Julien Chiquet at <https://github.com/jchiquet/RcppArmadilloNLoptExample>
  also containing a large earlier pull request of mine.
 License: GPL (>= 2)
 Encoding: UTF-8
