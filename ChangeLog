@@ -1,3 +1,7 @@
+2020-04-06  Dirk Eddelbuettel  <edd@debian.org>
+
+	* README.md: Added 'last commit' badge, some edits
+
 2018-10-01  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Initial release 0.0.1
