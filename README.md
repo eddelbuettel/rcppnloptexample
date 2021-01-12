@@ -1,6 +1,7 @@
 ## RcppNLoptExample: Rcpp example of using [NLopt](https://nlopt.readthedocs.io/en/latest/) via [nloptr](https://github.com/jyypma/nloptr)
 
 [![Build Status](https://travis-ci.org/eddelbuettel/rcppnloptexample.svg)](https://travis-ci.org/eddelbuettel/rcppnloptexample)
+[![CI](https://github.com/eddelbuettel/rcppnloptexample/workflows/ci/badge.svg)](https://github.com/eddelbuettel/rcppnloptexample/actions?query=workflow%3Aci)
 [![License](http://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](https://www.gnu.org/licenses/gpl-2.0.html)
 [![CRAN](http://www.r-pkg.org/badges/version/RcppNLoptExample)](https://cran.r-project.org/package=RcppNLoptExample)
 [![Downloads](http://cranlogs.r-pkg.org/badges/RcppNLoptExample?color=brightgreen)](http://www.r-pkg.org/pkg/RcppNLoptExample)
