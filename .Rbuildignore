@@ -1,10 +1,11 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^notes.txt
-^\.travis.yml$
+^\.travis\.yml$
 ^tests/.*\.Rout.save
 ^local
 ^\.codecov\.yml$
 ^LICENSE$
 ^.editorconfig$
 .*\.tar.gz$
+^\.github
