@@ -1,9 +1,9 @@
 ## RcppNLoptExample: Rcpp example of using [NLopt](https://nlopt.readthedocs.io/en/latest/) via [nloptr](https://github.com/jyypma/nloptr)
 
 [![CI](https://github.com/eddelbuettel/rcppnloptexample/workflows/ci/badge.svg)](https://github.com/eddelbuettel/rcppnloptexample/actions?query=workflow%3Aci)
-[![License](http://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](https://www.gnu.org/licenses/gpl-2.0.html)
-[![CRAN](http://www.r-pkg.org/badges/version/RcppNLoptExample)](https://cran.r-project.org/package=RcppNLoptExample)
-[![Downloads](http://cranlogs.r-pkg.org/badges/RcppNLoptExample?color=brightgreen)](http://www.r-pkg.org/pkg/RcppNLoptExample)
+[![License](https://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](https://www.gnu.org/licenses/gpl-2.0.html)
+[![CRAN](https://www.r-pkg.org/badges/version/RcppNLoptExample)](https://cran.r-project.org/package=RcppNLoptExample)
+[![Downloads](https://cranlogs.r-pkg.org/badges/RcppNLoptExample?color=brightgreen)](https://www.r-pkg.org/pkg/RcppNLoptExample)
 [![Last Commit](https://img.shields.io/github/last-commit/eddelbuettel/rcppnloptexample)](https://github.com/eddelbuettel/rcppnloptexample)
 
 ### About
