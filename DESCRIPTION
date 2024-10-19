@@ -3,8 +3,8 @@ Type: Package
 Title: 'Rcpp' Package Illustrating Header-Only Access to 'NLopt'
 Version: 0.0.1
 Date: 2018-10-01
-Author: Dirk Eddelbuettel
-Maintainer: Dirk Eddelbuettel <edd@debian.org>
+Authors@R: person("Dirk", "Eddelbuettel", role = c("aut", "cre"), email = "edd@debian.org",
+                  comment = c(ORCID = "0000-0001-6419-907X"))
 Description: An example package which shows use of 'NLopt' functionality from
  C++ via 'Rcpp' without requiring linking, and relying just on 'nloptr' thanks
  to the exporting API added there by Jelmer Ypma. This package is a fully
