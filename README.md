@@ -1,4 +1,4 @@
-## RcppNLoptExample: Rcpp example of using [NLopt](https://nlopt.readthedocs.io/en/latest/) via [nloptr](https://github.com/jyypma/nloptr)
+## RcppNLoptExample: Rcpp example of using [NLopt](https://nlopt.readthedocs.io/en/latest/) via [nloptr](https://github.com/astamm/nloptr)
 
 [![CI](https://github.com/eddelbuettel/rcppnloptexample/workflows/ci/badge.svg)](https://github.com/eddelbuettel/rcppnloptexample/actions?query=workflow%3Aci)
 [![License](https://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](https://www.gnu.org/licenses/gpl-2.0.html)
@@ -8,7 +8,7 @@
 
 ### About
 
-Starting with its 1.2.0 release, the [nloptr](https://github.com/jyypma/nloptr) package by [Jelmer
+Starting with its 1.2.0 release, the [nloptr](https://github.com/astamm/nloptr) package by [Jelmer
 Ypma](https://github.com/jyypma) now exports its C symbols in a way that makes it accessible to
 other R packages _without linking_ easing the installation across operating systems.
 

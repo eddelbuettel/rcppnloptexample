@@ -1,8 +1,8 @@
 Package: RcppNLoptExample
 Type: Package
 Title: 'Rcpp' Package Illustrating Header-Only Access to 'NLopt'
-Version: 0.0.1
-Date: 2018-10-01
+Version: 0.0.2
+Date: 2025-03-09
 Authors@R: person("Dirk", "Eddelbuettel", role = c("aut", "cre"), email = "edd@debian.org",
                   comment = c(ORCID = "0000-0001-6419-907X"))
 Description: An example package which shows use of 'NLopt' functionality from
