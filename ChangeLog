@@ -1,3 +1,10 @@
+2025-03-11  Dirk Eddelbuettel  <edd@debian.org>
+
+	* src/nlopt.cpp (testConstrainedProblem): Minor tweak
+	* tests/simpleTest.R: Add verbose argument
+
+	* cleanup: Added simple helper
+
 2025-03-09  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Release 0.0.2
