@@ -16,3 +16,14 @@ testConstrainedProblem <- function(method = "MMA", verbose = FALSE) {
     .Call(`_RcppNLoptExample_testConstrainedProblem`, method, verbose)
 }
 
+#' Helper function to access the NLopt version as an integer vector.
+#'
+#' @title NLopt Version as Vector
+#' @return Am integer vector with three elements for major, minor and patch release.
+#' @examples
+#' nloptVersion()
+#' package_version(paste(as.character(nloptVersion()), collapse="."))
+nloptVersion <- function() {
+    .Call(`_RcppNLoptExample_nloptVersion`)
+}
+

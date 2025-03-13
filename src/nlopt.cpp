@@ -77,3 +77,17 @@ std::vector<double> testConstrainedProblem(std::string method = "MMA",
     nlopt_destroy(opt);
     return x;
 }
+
+//' Helper function to access the NLopt version as an integer vector.
+//'
+//' @title NLopt Version as Vector
+//' @return Am integer vector with three elements for major, minor and patch release.
+//' @examples
+//' nloptVersion()
+//' package_version(paste(as.character(nloptVersion()), collapse="."))
+// [[Rcpp::export]]
+Rcpp::IntegerVector nloptVersion() {
+    int ma, mi, pa;
+    nlopt_version(&ma, &mi, &pa);
+    return Rcpp::IntegerVector{ma, mi, pa};
+}

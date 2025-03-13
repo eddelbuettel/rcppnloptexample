@@ -1,3 +1,11 @@
+2025-03-13  Dirk Eddelbuettel  <edd@debian.org>
+
+	* src/nlopt.cpp: Add NLopt version accessor
+	* man/nloptVersion.Rd: Documentation
+	* src/RcppExports.cpp: Regenerated
+	* R/RcppExports.R: Idem
+	* NAMESPACE: Exported
+
 2025-03-11  Dirk Eddelbuettel  <edd@debian.org>
 
 	* src/nlopt.cpp (testConstrainedProblem): Minor tweak
