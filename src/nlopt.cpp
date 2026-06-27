@@ -1,10 +1,12 @@
 #include "Rcpp.h"
 #include <nloptrAPI.h>
+#include <tl.h>
 
 static int fcount = 0, ccount = 0;
 
 double myfunc(unsigned n, const double *x, double *grad, void *my_func_data) {
     fcount++;
+    tl::debug("[myfunc] func eval {}", fcount);
     if (grad) {
         grad[0] = 0.0;
         grad[1] = 0.5 / sqrt(x[1]);
@@ -18,6 +20,7 @@ typedef struct {
 
 double myconstraint(unsigned n, const double *x, double *grad, void *data) {
     ccount++;
+    tl::trace("[myconstraint] constraint eval {}", ccount);
     my_constraint_data *d = (my_constraint_data *) data;
     double a = d->a, b = d->b;
     if (grad) {
@@ -27,15 +30,19 @@ double myconstraint(unsigned n, const double *x, double *grad, void *data) {
     return ((a*x[0] + b) * (a*x[0] + b) * (a*x[0] + b) - x[1]);
 }
 
-//' A simple example for for NLopt integration for Rcpp,
-//' using an example from the NLopt tutorial.
-//'
 //' @title NLopt Call Example from Rcpp
+//'
+//' @description A simple example for for NLopt integration for Rcpp, using an example from the
+//' NLopt tutorial.
+//'
 //' @param method A string defaulting to \sQuote{MMA} (also allowing \sQuote{COBYLA})
 //' which selects the algorithm use.
 //' @param verbose A boolean toggle defaulting to \sQuote{false}
+//'
 //' @return A numeric vector with two elements
+//'
 //' @seealso \url{https://nlopt.readthedocs.io/en/latest/NLopt_Tutorial/}
+//'
 //' @examples
 //' testConstrainedProblem("MMA", TRUE)
 // [[Rcpp::export]]
@@ -64,7 +71,10 @@ std::vector<double> testConstrainedProblem(std::string method = "MMA",
 
     if (nlopt_optimize(opt, &(x[0]), &minf) < 0) {
         if (verbose) Rcpp::Rcout << "nlopt failed!" << std::endl;
+        tl::warn("nlopt failed");
     } else {
+        tl::info("[testConstrainedProblem] Minimum reached at ({:0.4f}, {:0.4f}) "
+                 "after {} function evaluations", x[0], x[1], fcount);
         if (verbose) {
             Rcpp::Rcout << std::setprecision(5)
                         << "Found minimum at f(" << x[0] << "," << x[1] << ") "
@@ -81,13 +91,19 @@ std::vector<double> testConstrainedProblem(std::string method = "MMA",
 //' Helper function to access the NLopt version as an integer vector.
 //'
 //' @title NLopt Version as Vector
-//' @return Am integer vector with three elements for major, minor and patch release.
+//' @return A list with an integer vector with three elements for major, minor
+//' and patch release, classed as \code{package_version} and \code{numeric_version}.
 //' @examples
 //' nloptVersion()
-//' package_version(paste(as.character(nloptVersion()), collapse="."))
 // [[Rcpp::export]]
-Rcpp::IntegerVector nloptVersion() {
+Rcpp::List nloptVersion() {
     int ma, mi, pa;
     nlopt_version(&ma, &mi, &pa);
-    return Rcpp::IntegerVector{ma, mi, pa};
+    // create a vector of major, minor, patch
+    auto ver = Rcpp::IntegerVector{ma, mi, pa};
+    // and place it in a list (as e.g. packageVersion() in R returns)
+    auto lst = Rcpp::List::create(ver);
+    // and class it as 'package_version' accessing print() etc methods
+    lst.attr("class") = Rcpp::CharacterVector::create("package_version", "numeric_version");
+    return lst;
 }

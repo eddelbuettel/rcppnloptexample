@@ -13,9 +13,8 @@ Description: An example package which shows use of 'NLopt' functionality from
  also containing a large earlier pull request of mine.
 License: GPL (>= 2)
 Encoding: UTF-8
-LinkingTo: Rcpp, nloptr (>= 1.2.0)
-Imports: Rcpp, nloptr (>= 1.2.0)
+LinkingTo: Rcpp, nloptr (>= 1.2.0), tl, rspdlite
+Imports: Rcpp, nloptr (>= 1.2.0), tl
 Depends: R (>= 3.0.2)
-RoxygenNote: 6.0.1
 URL: https://github.com/eddelbuettel/rcppnloptexample, https://dirk.eddelbuettel.com/code/rcpp.nloptexample.html
 BugReports: https://github.com/eddelbuettel/rcppnloptexample/issues
