@@ -3,6 +3,11 @@
 	* src/nlopt.cpp: Add C++ logging via tl
 	* DESCRIPTION (Imports, LinkingTo): Add tl
 	* src/Makevars (CXX_STD): Use C++20
+	* man/testConstrainedProblem.Rd: Regenerated after minor edits
+
+	* R/wrapper.R (wrapper): Add wrapper to show R logging
+	* man/wrapper.Rd: Generated
+	* NAMESPACE: Export wrapper
 
 2026-01-27  Dirk Eddelbuettel  <edd@debian.org>
 
