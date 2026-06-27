@@ -5,6 +5,9 @@
 	* src/Makevars (CXX_STD): Use C++20
 	* man/testConstrainedProblem.Rd: Regenerated after minor edits
 
+	* R/init.R (.onLoad): Allow default log level setting from
+	environment variable 'TL_LEVEL', defaults to 'info'
+
 	* R/wrapper.R (wrapper): Add wrapper to show R logging
 	* man/wrapper.Rd: Generated
 	* NAMESPACE: Export wrapper
