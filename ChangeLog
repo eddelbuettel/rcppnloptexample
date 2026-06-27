@@ -1,3 +1,9 @@
+2026-06-27  Dirk Eddelbuettel  <edd@debian.org>
+
+	* src/nlopt.cpp: Add C++ logging via tl
+	* DESCRIPTION (Imports, LinkingTo): Add tl
+	* src/Makevars (CXX_STD): Use C++20
+
 2026-01-27  Dirk Eddelbuettel  <edd@debian.org>
 
 	* .github/workflows/ci.yaml: Switch to actions/checkout@v6
