@@ -9,6 +9,11 @@
 	* man/wrapper.Rd: Generated
 	* NAMESPACE: Export wrapper
 
+	* src/nlopt.cpp: Set 'package_version' S3 class on returned version,
+	making ita list object with version vector as first element as in R
+	* src/RcppExports.cpp: Regenerated
+	* R/RcppExports.R: Idem
+
 2026-01-27  Dirk Eddelbuettel  <edd@debian.org>
 
 	* .github/workflows/ci.yaml: Switch to actions/checkout@v6

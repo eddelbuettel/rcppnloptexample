@@ -23,7 +23,7 @@ BEGIN_RCPP
 END_RCPP
 }
 // nloptVersion
-Rcpp::IntegerVector nloptVersion();
+Rcpp::List nloptVersion();
 RcppExport SEXP _RcppNLoptExample_nloptVersion() {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
