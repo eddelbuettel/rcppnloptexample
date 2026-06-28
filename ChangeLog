@@ -1,3 +1,10 @@
+2026-06-28  Dirk Eddelbuettel  <edd@debian.org>
+
+	* configure: Added to select compilation standard
+	* tools/configure.R: Idem
+	* src/Makevars.in: Added stanza
+	* cleanup: Also remove created src/Makevars
+
 2026-06-27  Dirk Eddelbuettel  <edd@debian.org>
 
 	* src/nlopt.cpp: Add C++ logging via tl
