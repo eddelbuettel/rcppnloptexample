@@ -6,6 +6,7 @@
 	* cleanup: Also remove created src/Makevars
 
 	* R/init.R (.onLoad): Use tl::init() if available
+	* NAMESPACE: Import tl and utils::packageVersion
 
 2026-06-27  Dirk Eddelbuettel  <edd@debian.org>
 
