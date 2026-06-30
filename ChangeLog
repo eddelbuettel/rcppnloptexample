@@ -1,3 +1,10 @@
+2026-06-30  Dirk Eddelbuettel  <edd@debian.org>
+
+	* src/nlopt.cpp (testConstrainedProblem): Display tweak, expanded
+	documentation
+	* man/testConstrainedProblem.Rd: Regenerated
+	* R/RcppExports.R: Idem
+
 2026-06-28  Dirk Eddelbuettel  <edd@debian.org>
 
 	* configure: Added to select compilation standard

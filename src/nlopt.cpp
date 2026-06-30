@@ -1,6 +1,6 @@
-#include "Rcpp.h"
-#include <nloptrAPI.h>
-#include <tl.h>
+#include <Rcpp/Lightest>         // for Rcpp with minimal add-ons
+#include <nloptrAPI.h>           // NLopt via nloptr using C interface
+#include <tl.h>                  // tiny logging via rspdlite and spdlite
 
 static int fcount = 0, ccount = 0;
 
@@ -34,6 +34,13 @@ double myconstraint(unsigned n, const double *x, double *grad, void *data) {
 //'
 //' @description A simple example for for NLopt integration for Rcpp, using an example from the
 //' NLopt tutorial.
+//'
+//' @details This function illustrates use of \pkg{NLopt} from R without requiring linking.
+//' It relies on the set of exported functions the \pkg{nloptr} R package provides directly
+//' (and also instantiates) using a method described in \emph{Writing R Extensions}. There
+//' is also a C++ interface to \pkg{NLopt} but it requires linking making use from another
+//' R package a little more involved as presence and location of the \pkg{NLopt} library
+//' may need to be checked (though using \pkg{pkgconf} can help).
 //'
 //' @param method A string defaulting to \sQuote{MMA} (also allowing \sQuote{COBYLA})
 //' which selects the algorithm use.
@@ -73,8 +80,8 @@ std::vector<double> testConstrainedProblem(std::string method = "MMA",
         if (verbose) Rcpp::Rcout << "nlopt failed!" << std::endl;
         tl::warn("nlopt failed");
     } else {
-        tl::info("[testConstrainedProblem] Minimum reached at ({:0.4f}, {:0.4f}) "
-                 "after {} function evaluations", x[0], x[1], fcount);
+        tl::info("[testConstrainedProblem] Minimum {:0.4f} reached at ({:0.4f}, {:0.4f}) "
+                 "after {} function evaluations", minf, x[0], x[1], fcount);
         if (verbose) {
             Rcpp::Rcout << std::setprecision(5)
                         << "Found minimum at f(" << x[0] << "," << x[1] << ") "
