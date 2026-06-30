@@ -1,5 +1,7 @@
 2026-06-30  Dirk Eddelbuettel  <edd@debian.org>
 
+	* DESCRIPTION (Version, Date): Roll micro version and date
+
 	* src/nlopt.cpp (testConstrainedProblem): Display tweak, expanded
 	documentation
 	* man/testConstrainedProblem.Rd: Regenerated
