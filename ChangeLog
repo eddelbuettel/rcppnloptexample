@@ -7,6 +7,8 @@
 	* man/testConstrainedProblem.Rd: Regenerated
 	* R/RcppExports.R: Idem
 
+	* README.md: Mention RcppArmadilloNLoptExample repo
+
 2026-06-28  Dirk Eddelbuettel  <edd@debian.org>
 
 	* configure: Added to select compilation standard

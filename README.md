@@ -38,7 +38,9 @@ code (which R cannot easily export across packages using its C interface). So C 
 
 This repo builds on, extends, and simplifies an earlier [repo by Julien
 Chiquet](https://github.com/jchiquet/RcppArmadilloNLoptExample) to which I contributed a core part
-of this setup.
+of the setup. It has later been forked into this
+[RcppArmadilloNLoptExample](https://github.com/jchiquet/RcppArmadilloNLoptExample) repo containing
+two different approaches to combine NLopt, RcppArmadillo and R.
 
 ### Author
 
